@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Question</h1>
+        <form action="{{ url_for('add_question') }}" method="POST">
+            <label for="question">Question:</label><br>
+            <textarea id="question" name="question" required></textarea><br><br>
+
+            <label for="option1">Option 1:</label><br>
+            <input type="text" id="option1" name="option1" required><br><br>
+
+            <label for="option2">Option 2:</label><br>
+            <input type="text" id="option2" name="option2" required><br><br>
+
+            <label for="option3">Option 3:</label><br>
+            <input type="text" id="option3" name="option3" required><br><br>
+
+            <label for="option4">Option 4:</label><br>
+            <input type="text" id="option4" name="option4" required><br><br>
+
+            <label>Correct Options:</label><br>
+            <input type="checkbox" name="correct_options" value="1"> Option 1<br>
+            <input type="checkbox" name="correct_options" value="2"> Option 2<br>
+            <input type="checkbox" name="correct_options" value="3"> Option 3<br>
+            <input type="checkbox" name="correct_options" value="4"> Option 4<br><br>
+
+            <button type="submit" class="submit-btn">Add Question</button>
+        </form>
+    </div>
+</body>
+</html>
